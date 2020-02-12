@@ -124,7 +124,7 @@
     cursor: pointer;
     &+button{
       margin-left: 5px;
-    } 
+    }
     &.mixitup-control-active{
       background-color: $red;
       color: #fff;
@@ -142,6 +142,12 @@
   width: 100%;
   box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
   margin-bottom: 30px;
+  &-star{
+    font-size: 12px;
+    span{
+      color: $bg;
+    }
+  }
   &-img {
     min-height: 250px;
     display: block;
@@ -186,6 +192,7 @@
   &-autor{
     display: flex;
     align-items: center;
+    min-width: 245px;
     .avatar{
       width: 30px;
       height: 30px;
@@ -214,7 +221,40 @@
     cursor: pointer;
    }
 }
+// end products
+// start products-slider
+.product-slider{
+  padding: 110px 0 120px;  
+  .slick-dots{
+    margin-top: 50px;
+    text-align: center;
+    li{
+      display: inline-block;
+      margin-left: 3px;
+      margin-right: 3px;
+      &.slick-active{
+        button{
+          background-color: $green;
+        }
+      }    
+      button{        
+        border-radius: 50%;
+        background-color: rgb(232, 232, 232);
+        border: none;
+        font-size: 0;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        outline: none;
+      }
+    }
+  }
+}
 
 
 
+  
+  
 
+
+// end products-slider
