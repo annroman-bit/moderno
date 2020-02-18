@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   height: 90px;
-  align-items: center;
+  align-items: center;  
 }
 .header__text{
   margin-left: auto;
@@ -28,7 +28,8 @@
 .header__btn-login{
   background-color: $green;
 }
-.header__btn-register{
+.header__btn-register,
+.header__btn-logout{
   background-color: $red;
   margin-left: 7px;
 }
@@ -51,6 +52,247 @@
       font-size: 14px;
     }
   }
+}
+.header__circle{
+  &.active{
+    display: block;
+  }
+  display: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  margin-right: 15px;
+  position: relative;
+  &::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #a0a0a0;
+    font-size: 14px;    
+  }
+  span{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+    right: -7px;
+    top: -7px; 
+    color: #fff;
+    font-size: 11px;
+  }
+}
+.header__box{
+  display: flex;
+  align-items: center;
+}
+.notification {
+  span{
+    background-color: $yellow;    
+  }
+}
+.massage {
+  span{
+    background-color: $tomato;
+  }
+}
+.basket {
+  span{
+    background-color: $green;
+  }
+}
+.header__btn-login--off{
+  display: none;
+}
+.header__btn-logout{
+  display: none;
+  &.header__btn-login--on{
+    display: block;
+  }
+}
+.user{
+  margin-left: 5px;
+  margin-right: 25px;
+  padding-right: 20px;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: "\f107";
+    font-family: "icomoon";
+    font-size: 16px;
+    color: #767676;
+    top: 0;
+    right: 0;
+  }
+  &__inner{
+    display: flex;
+    align-items: center;
+  }
+  &__images{
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+    @include bgi;
+    margin-right: 15px;
+    border-radius: 50%;
+  }
+  &__info {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &__money{
+    color: $green;
+    @include f700;
+  }
+  &__name{
+    color: #222;    
+    @include f500;
+  }
+}
+.user__menu{  
+  padding: 0 20px;
+  width: 158px;  
+  border: 0 solid #ccc;
+  position: absolute;
+  background-color: #fff;
+  transition: all 0.5s;
+  top: 69px;  
+  left: 20px;
+  height: 0;  
+  overflow: hidden;
+  a{
+    font-size: 12px;
+    color: #546e7a;
+    margin-bottom: 15px;    
+  }
+}
+.user__box{
+  position: relative;
+  margin-top: 40px;
+  height: 90px;
+  transition: all 0.5s;
+  &:hover{
+    .user__menu{
+      height: auto;
+      border-width: 1px;
+      padding: 20px;
+      overflow: auto;
+    }
+  }
+}
+.circle__menu{ 
+  top: 90px;
+  right: 0;
+  border: 0 solid #ccc;
+  position: absolute;
+  background-color: #fff; 
+  width: 270px;
+  height: 0;
+  overflow: hidden;    
+}
+.basket__box,
+.massage__box,
+.notification__box{
+  position: relative;  
+  height: 90px;
+  padding-top: 29px; 
+  transition: all 0.5s; 
+  &:hover{
+    .header__circle::before{
+      color: $bg;
+    }
+    .circle__menu{
+      overflow: hidden;
+      height: auto;      
+    }
+    .circle__items{
+      padding: 23px;
+      border-width: 1px;
+
+
+    }
+  }
+}
+.circle__items{
+  border: 1px solid #e0e0e0;
+  border-bottom: none;
+  padding: 0;
+  display: flex;
+  align-items: center; 
+  position: relative;
+  transition: all 0.5s; 
+  &::before{
+    position: absolute;
+    right: 28px;
+    top: 40px;
+    color: #b0bec5;
+    font-size: 16px;
+  }
+}
+.circle__images{
+  margin-right: 15px;
+}
+.circle__info{
+  line-height: 18px;
+  &-name{
+  @include f500;
+  color: $bg;
+  }
+  &-theme{
+    color: $green;
+    font-size: 12px;
+  }
+  &-price{
+    @include f500;
+    color: #000;
+    font-size: 16px;
+  }
+  &-date{
+    color: #707070;
+    font-size: 10px;
+  }
+}
+.basket__summ{
+  padding: 16px 17px 12px;
+  border: 1px solid #e0e0e0;
+  &-title{
+    padding: 0 22px 0 13px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    @include f700;
+    font-size: 15px;
+    color: $bg;
+  }
+}
+.basket__btn{
+  font-size: 14px;
+  color: #fff;
+  @include f700;
+  padding: 12px 5px;
+  background-color: $green;
+  text-align: center;
+  width: 100px;
+}
+.basket__btn-checkout{
+  width: 123px;
+  margin-left: 6px;
+  background-color: $red;
+}
+.notification__menu,
+.massage__menu{
+  .circle__images{
+    margin-right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+}
+.items-color{
+  color: $tomato;
 }
 // end header
 
@@ -876,12 +1118,5 @@ padding-top: 23px;
     }
   }
 }
-
-
-
-
-
-
-
 
 // end product-page
