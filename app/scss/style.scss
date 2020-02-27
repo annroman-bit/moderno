@@ -1979,13 +1979,309 @@ padding-top: 23px;
     }
   }
 }
-
-
-
 // end profile
 
+// start upload
+.upload__inner{
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  margin-bottom: 110px;
+  padding-bottom: 70px;
+  button{
+    color: #fff;
+    background-color: $green;
+    border: none;
+    padding: 15px 36px;
+    margin-left: 215px;
+    cursor: pointer;
+  }
+  &-title{
+    font-size: 24px;
+    @include f500;
+    padding: 16px 35px 18px;
+    color: $bg;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 40px;
+  }
+  &-content{
+    margin-bottom: 30px;
+    padding-left: 45px;
+    padding-right: 50px;
+  }
+}
+.upload-line{
+  margin-bottom: 25px;
+  display: flex;  
+  label{
+    padding-top: 5px;
+    min-width: 175px;
+    padding-right: 15px;
+    color: #444;
+    span{
+      color: $green;
+    }    
+  }
+  select,
+  input,
+  textarea{
+    width: 100%;
+    display: block;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0 18px;
+    &::placeholder{
+      color: #707070;
+    }
+  }
+  textarea{
+    resize: none;
+    height: 150px;
+    padding: 8px 18px;
+  }  
+  input[type="file"]{
+    outline: none;
+  }
+  .jq-file{
+    box-shadow: none;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0 18px;
+    &__name{
+      background: transparent;
+      box-shadow: none;
+      border: none;
+      border-bottom-color: transparent;
+      border-radius: 0;
+      padding: 0;
+      height: 40px;
+      width: 100%;
+      line-height: 40px;
+      color: #707070;
+      margin-left: 100px;      
+    }  
+    &__browse {
+      top: 1px;
+      right: 1px;
+      padding: 0 12px;
+      border: 1px solid #d7d7d7;
+      border-left: 1px solid #d7d7d7;
+      border-radius: 0;
+      background: #fff;
+      box-shadow: none;
+      text-shadow: none;
+      font-size: 12px;
+      line-height: 26px;
+      color: #444;
+      top: 5px;
+      right: auto;
+      left: 9px;
+    }  
+  }
+  .jq-selectbox{
+    width: 100%;
+  } 
+  .jq-selectbox__select{    
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0;
+    background: #f9f9f9;
+    box-shadow: none;
+    text-shadow: none;
+    color: #707070;
+    font-family: 'Roboto-Regular', sans-serif;
+    line-height: 40px;
+  }
+  .jq-selectbox__trigger-arrow{
+    border: none;
+    font-size: 15px;
+    right: 20px;
+    line-height: 40px;
+    top: 0;
+    &::before{
+      font-family: 'icomoon';
+      content: "\f0d7";      
+    }
+  }
+  .jq-selectbox__trigger{
+    border-left: none;
+  }
+}
+// end upload
+// start withdrawals
+.withdrawals{
+  &__inner{
+    display: flex; 
+    justify-content: space-between;
+    margin-bottom: 110px;
+  }
+  &__col{
+    max-width: 570px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    height: 100%;
+  }
+  &__title{
+    font-size: 24px;
+    @include f500;
+    padding: 18px 32px 24px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 30px;
+    color: $bg;
+  }
+  &__content{
+    padding-left: 35px;
+    padding-right: 40px;
+    button{
+      color: #fff;
+      background-color: $green;
+      border: none;
+      padding: 15px 36px;      
+      cursor: pointer;
+      margin-bottom: 50px;
+    }    
+  }
+  &__form-line{
+    margin-bottom: 25px;
+    label{
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      @include f500;
+      margin-bottom: 15px;
+      color: $bg;
+      span{
+        color: $green;
+      }
+    }
+    input,
+    select{
+      width: 100%;
+      display: block;
+      border: 1px solid #d7d7d7;
+      height: 40px;
+      background-color: #f9f9f9;
+      padding: 0 18px;
+      &::placeholder{
+        color: #707070;
+      }
+    }
+    .jq-file{
+      box-shadow: none;
+      width: 100%;
+      border-radius: 0;
+      border: 1px solid #d7d7d7;
+      height: 40px;
+      background-color: #f9f9f9;
+      padding: 0 18px;
+      &__name{
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        border-bottom-color: transparent;
+        border-radius: 0;
+        padding: 0;
+        height: 40px;
+        width: 100%;
+        line-height: 40px;
+        color: #707070;
+        margin-left: 100px;      
+      }  
+      &__browse {
+        top: 1px;
+        right: 1px;
+        padding: 0 12px;
+        border: 1px solid #d7d7d7;
+        border-left: 1px solid #d7d7d7;
+        border-radius: 0;
+        background: #fff;
+        box-shadow: none;
+        text-shadow: none;
+        font-size: 12px;
+        line-height: 26px;
+        color: #444;
+        top: 5px;
+        right: auto;
+        left: 9px;
+      }  
+    }
+    .jq-selectbox{
+      width: 100%;
+    } 
+    .jq-selectbox__select{    
+      height: 40px;
+      padding: 0 18px;
+      border: 1px solid #d7d7d7;
+      border-bottom-color: #d7d7d7;
+      border-radius: 0;
+      background: #f9f9f9;
+      box-shadow: none;
+      text-shadow: none;
+      color: #707070;
+      font-family: 'Roboto-Regular', sans-serif;
+      line-height: 40px;
+    }
+    .jq-selectbox__trigger-arrow{
+      border: none;
+      font-size: 15px;
+      right: 20px;
+      line-height: 40px;
+      top: 0;
+      &::before{
+        font-family: 'icomoon';
+        content: "\f0d7";      
+      }
+    }
+    .jq-selectbox__trigger{
+      border-left: none;
+    }    
+  }
+}
+.withdrawals__content{
+  &-items{
+    padding-bottom: 35px;
+  }
+  &-item{
+    display: flex;
+    height: 42px;
+    align-items: center;
+    font-size: 13px;
+    color: #444;
+    &:nth-child(odd){
+      background-color: #f9f9f9;
+    }
+  }
+  &-date{
+    width: 154px;
+    padding-left: 20px;
+    @include f500;
+  }
+  &-email{
+    width: 180px;
+    @include f500;
+  }
+  &-price{
+    width: 70px;
+    @include f700;
+  }
+  &-status{
+    width: 88px;
+    @include f700;    
+    &.withdrawals__content-paid{
+      color: $green;
+    }
+  }
+}
 
 
+
+// end withdrawals
 
 
 
